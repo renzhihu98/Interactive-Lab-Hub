@@ -59,13 +59,13 @@ Labs are due on Mondays. Make sure this page is linked to on your main class hub
 The interactive device can be anything *except* a computer, a tablet computer or a smart phone, but the main way it interacts needs to be using light.
 **Describe your setting, players, activity and goals here.**
 
-Setting: the interaction is happening in the living room, when the user finishes replacing items, such as water filter, contact lenses, electric tooth brush head, etc.
+**Setting**: the interaction is happening in the living room, when the user finishes replacing items, such as water filter, contact lenses, electric tooth brush head, etc.
 
-Players: anyone in the household could be the player and enter their own reminder
+**Players**: anyone in the household could be the player and enter their own reminder
 
-Activity: when the users tell the smart light they want to set up a reminder, the light will ask the date, duration, items and set up the reminder. On the day the item is ready to be replaced, the smart light will blink and remind the user.
+**Activity**: when the users tell the smart light they want to set up a reminder, the light will ask the date, duration, items and set up the reminder. On the day the item is ready to be replaced, the smart light will blink and remind the user.
 
-Goals: to be reminded that something in the house needs to be replaced
+**Goals**: to be reminded that something in the house needs to be replaced
 
 Sketch a storyboard of the interactions you are planning. It does not need to be perfect, but must get across the behavior of the interactive device and the other characters in the scene. 
 **Include a picture of your storyboard here**
