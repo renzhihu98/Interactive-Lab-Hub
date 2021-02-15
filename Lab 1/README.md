@@ -85,7 +85,7 @@ Try physically acting out the interaction you planned. For now, you can just pre
 
 **Are there things that seemed better on paper than acted out?**
 
-Since it's a fairly straightforward and simple interaction, everything seemed the same as I imaged on paper.
+Since it's a fairly straightforward and simple interaction, everything seemed the same as I imagined on paper.
 
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
 
