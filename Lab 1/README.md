@@ -85,7 +85,11 @@ Try physically acting out the interaction you planned. For now, you can just pre
 
 **Are there things that seemed better on paper than acted out?**
 
+Since it's a fairly straightforward and simple interaction, everything seemed the same as I imaged on paper.
+
 **Are there new ideas that occur to you or your collaborators that come up from the acting?**
+
+I could use buttons/screens to control the timer/reminder instead of voice control, which could make the device simpler.
 
 
 ## Part C. Prototype the device
@@ -100,16 +104,20 @@ If you run into technical issues with this tool, you can also use a light switch
 
 **Give us feedback on Tinkerbelle.**
 
-For some reason I can't connect to Tinkerbelle or open localhost.
+For some reason I couldn't connect to Tinkerbelle or open localhost after many tries. I have to use another computer for prototyping.
 
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
 **Include your first attempts at recording the set-up video here.**
 
+https://youtu.be/3UCAyVRp_VM
+
 Now, hange the goal within the same setting, and update the interaction with the paper prototype. 
 
 **Show the follow-up work here.**
+
+https://youtu.be/k6l5DAZGKdk
 
 ## Part E. Costume the device
 
@@ -128,6 +136,10 @@ The material of the dome that would impact how light go through. The shape and s
 ## Part F. Record
 
 **Take a video of your prototyped interaction.**
+
+https://youtu.be/0fVOuzFNdpI
+
+I couldn't find the exact shape of materials I intented so the prototype is in cubic shape instead of hemispherical.
 
 **Please indicate anyone you collaborated with on this Lab.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
