@@ -100,6 +100,8 @@ If you run into technical issues with this tool, you can also use a light switch
 
 **Give us feedback on Tinkerbelle.**
 
+For some reason I can't connect to Tinkerbelle or open localhost.
+
 ## Part D. Wizard the device
 Take a little time to set up the wizarding set-up that allows for someone to remotely control the device while someone acts with it. Hint: You can use Zoom to record videos, and you can pin someone’s video feed if that is the scene which you want to record. 
 
@@ -117,8 +119,11 @@ Think about the setting of the device: is the environment a place where the devi
 
 **Include sketches of what your device might look like here.**
 
+![Image](https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%201/sketch.jpg)
+
 **What concerns or opportunitities are influencing the way you've designed the device to look?**
 
+The material of the dome that would impact how light go through. The shape and size of the device, not too small & not too big, and it needs to have enough area for light to diffuse.
 
 ## Part F. Record
 
