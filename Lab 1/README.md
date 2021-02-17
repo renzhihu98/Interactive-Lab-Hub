@@ -144,6 +144,8 @@ I couldn't find the exact shape of materials I intented so the prototype is in c
 **Please indicate anyone you collaborated with on this Lab.**
 Be generous in acknowledging their contributions! And also recognizing any other influences (e.g. from YouTube, Github, Twitter) that informed your design. 
 
+I was in a breakout room with Yimeng Sun, Songyu Du, Panda Xu and Wenqing Tang and they provided me with valuable feedbacks.
+
 # Staging Interaction, Part 2 
 
 This describes the second week's work for this lab activity.
@@ -154,6 +156,25 @@ This describes the second week's work for this lab activity.
 You will be assigned three partners from another group. Go to their github pages, view their videos, and provide them with reactions, suggestions & feedback: explain to them what you saw happening in their video. Guess the scene and the goals of the character. Ask them about anything that wasn’t clear. 
 
 **Summarize feedback from your partners here.**
+
+- I think it's filling the niche of having a reminder just in general, and I like your prototype design a lot.
+- Since the water filter already has a light, it might be better to set your reminder to remind you of replacing something else, maybe the contact lens.
+- You can consider using different light to indicate different objects to replace too! 
+
+- I'm wondering if the device will need to plug into an outlet or it will have its own battery. I personally recommend the first setting because it will be hard for user to know the battery is running out as you can't use light to indicate it.
+- Maybe the device could set to be only blink during the day to save the electricity and avoid disturbing the user's sleeping?
+- You could add the use cases in which you need to change the reminder, cancel it, or refresh it (suppose you just changed the filter)
+
+- I saw a device responding by light to user’s voice command on setting up a reminder to replace the water filter. The device goes green when it has successfully set up a reminder and it goes red when the reminder goes off.
+- Scene: At home when someone uses the water pitcher (Brita or something).
+- Goal: to remind users to replace the water filter at their designated time.
+- Not clear: will the light be green throughout the whole time after the reminder is set up and before the reminder goes off? Or does the green light only last a few seconds when it’s been set up successfully?
+
+In your video, I saw the user is interacting with a smart lighting device that consists of an iPhone covered by a transparent lunchbox. She was talking to the lighting device to set up the water filter alarm. When the alarm is set, the light color turns from white to green and tells the user that the remainder is set successfully. Later when it is time to replace the water, the device turns white to red and uses a voice message to remind the user.
+
+Therefore, the goal of the character is to set a reminder for water replacement. 
+
+One thing that wasn't clear to me was the power supply. In your design, I don't see a battery pack or an A/C power supply on your device, so how will you supply power to your device? If you want to use a battery,  how would you design a battery that can last the device for two months?
 
 ## Make it your own
 
