@@ -158,27 +158,36 @@ You will be assigned three partners from another group. Go to their github pages
 **Summarize feedback from your partners here.**
 
 > I think it's filling the niche of having a reminder just in general, and I like your prototype design a lot.
+> 
 > Since the water filter already has a light, it might be better to set your reminder to remind you of replacing something else, maybe the contact lens.
+> 
 > You can consider using different light to indicate different objects to replace too! 
 
----
+
 
 > I'm wondering if the device will need to plug into an outlet or it will have its own battery. I personally recommend the first setting because it will be hard for user to know the battery is running out as you can't use light to indicate it.
+> 
 > Maybe the device could set to be only blink during the day to save the electricity and avoid disturbing the user's sleeping?
+> 
 > You could add the use cases in which you need to change the reminder, cancel it, or refresh it (suppose you just changed the filter)
 
----
+
 
 > I saw a device responding by light to user’s voice command on setting up a reminder to replace the water filter. The device goes green when it has successfully set up a reminder and it goes red when the reminder goes off.
+> 
 > Scene: At home when someone uses the water pitcher (Brita or something).
+> 
 > Goal: to remind users to replace the water filter at their designated time.
+> 
 > Not clear: will the light be green throughout the whole time after the reminder is set up and before the reminder goes off? Or does the green light only last a few seconds when it’s been set up successfully?
 
----
 
->In your video, I saw the user is interacting with a smart lighting device that consists of an iPhone covered by a transparent lunchbox. She was talking to the lighting device to set up the water filter alarm. When the alarm is set, the light color turns from white to green and tells the user that the remainder is set successfully. Later when it is time to replace the water, the device turns white to red and uses a voice message to remind the user.
->Therefore, the goal of the character is to set a reminder for water replacement. 
->One thing that wasn't clear to me was the power supply. In your design, I don't see a battery pack or an A/C power supply on your device, so how will you supply power to your device? If you want to use a battery,  how would you design a battery that can last the device for two months?
+
+> In your video, I saw the user is interacting with a smart lighting device that consists of an iPhone covered by a transparent lunchbox. She was talking to the lighting device to set up the water filter alarm. When the alarm is set, the light color turns from white to green and tells the user that the remainder is set successfully. Later when it is time to replace the water, the device turns white to red and uses a voice message to remind the user.
+> 
+> Therefore, the goal of the character is to set a reminder for water replacement. 
+> 
+> One thing that wasn't clear to me was the power supply. In your design, I don't see a battery pack or an A/C power supply on your device, so how will you supply power to your device? If you want to use a battery,  how would you design a battery that can last the device for two months?
 
 ## Make it your own
 
@@ -188,6 +197,14 @@ Do last week’s assignment again, but this time:
 3) We will be grading with an emphasis on creativity. 
 
 **Document everything here.**
+
+**Setting**: the interaction is happening mainly in the bathroom
+
+**Players**: anyone in the household could be the player and have their own entries in the organizer
+
+**Activity**: beauty products (moisturizer, eye cream, contact lenses etc.) need to be replaced once in a while due to ingredients inactivation and hygienic reasons, so when the user opens up a new product, he/she could enter the duration of the product to be reminded later. For example, a monthly contact lenses needs to be changed every month, therefore, when the scheduled time is up, the section of the conact lenses in the organizer would glow red light to alert the user. The smart organizer connects to the user's phone, which would also push notifications.
+
+**Goals**: to be reminded that something in the smart organizer needs to be replaced
 
 Storyboard, pt. 2
 
