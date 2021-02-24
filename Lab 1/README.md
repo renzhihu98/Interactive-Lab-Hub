@@ -196,6 +196,7 @@ Do last week’s assignment again, but this time:
 2) You can use any modality (e.g., vibration, sound) to prototype the behaviors, 
 3) We will be grading with an emphasis on creativity. 
 
+
 **Document everything here.**
 
 **Setting**: the interaction is happening mainly in the bathroom
@@ -211,3 +212,4 @@ Storyboard, pt. 2
 ![Image](https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%201/storyboard-p2.jpg?raw=true)
 
 [Prototype Video](https://youtu.be/OlW_5-4rQlk)
+
