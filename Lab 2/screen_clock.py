@@ -66,19 +66,20 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 
 while True:
+    draw.rectangle((0, 0, width, height), outline=0, fill=0)
     current_date = time.strftime("%m/%d/%Y")
     current_time = time.strftime("%H:%M:%S")
+    y = top
 
     if buttonA.value and buttonB.value:
-        backlight.value = False  # turn off backlight
+        draw.text((x, y), "Click the buttons!", font=font, fill="#FFFF00", align = "center")
     else:
-        draw.rectangle((0, 0, width, height), outline=0, fill=0)
     if buttonB.value and not buttonA.value:  # just button A pressed
-        y = 20
         draw.text((x, y), "Today's date: \n" + current_date, font=font, fill="#FFFF00", align = "center")
     if buttonA.value and not buttonB.value:  # just button B pressed
-        y = 20
         draw.text((x, y), "Current time: \n" + current_time, font=font, fill="#FFFF00", align = "center")
     if not buttonA.value and not buttonB.value:  # none pressed
-        y = 20
         draw.text((x, y), "Now the time is: \n" + current_date + current_time, font=font, fill="#FFFF00", align = "center")
+
+    disp.image(image, rotation)
+    time.sleep(1)
