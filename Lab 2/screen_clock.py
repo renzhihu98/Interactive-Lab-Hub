@@ -60,16 +60,25 @@ font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
 backlight = digitalio.DigitalInOut(board.D22)
 backlight.switch_to_output()
 backlight.value = True
+buttonA = digitalio.DigitalInOut(board.D23)
+buttonB = digitalio.DigitalInOut(board.D24)
+buttonA.switch_to_input()
+buttonB.switch_to_input()
 
 while True:
-    # Draw a black filled box to clear the image.
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    current_date = time.strftime("%m/%d/%Y")
+    current_time = time.strftime("%H:%M:%S")
 
-    #TODO: fill in here. You should be able to look in cli_clock.py and stats.py
-    current_time = time.strftime("%m/%d/%Y %H:%M:%S")
-    y = top
-    draw.text((x, y), current_time, font=font, fill="#FFFF00")
-
-    # Display image.
-    disp.image(image, rotation)
-    time.sleep(1)
+    if buttonA.value and buttonB.value:
+        backlight.value = False  # turn off backlight
+    else:
+        draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    if buttonB.value and not buttonA.value:  # just button A pressed
+        y = 20
+        draw.text((x, y), "Today's date: \n" + current_date, font=font, fill="#FFFF00", align = "center")
+    if buttonA.value and not buttonB.value:  # just button B pressed
+        y = 20
+        draw.text((x, y), "Current time: \n" + current_time, font=font, fill="#FFFF00", align = "center")
+    if not buttonA.value and not buttonB.value:  # none pressed
+        y = 20
+        draw.text((x, y), "Now the time is: \n" + current_date + current_time, font=font, fill="#FFFF00", align = "center")
