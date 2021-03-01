@@ -74,12 +74,12 @@ while True:
     if buttonA.value and buttonB.value:
         draw.text((x, y), "Click the buttons!", font=font, fill="#FFFF00", align = "center")
     else:
-    if buttonB.value and not buttonA.value:  # just button A pressed
-        draw.text((x, y), "Today's date: \n" + current_date, font=font, fill="#FFFF00", align = "center")
-    if buttonA.value and not buttonB.value:  # just button B pressed
-        draw.text((x, y), "Current time: \n" + current_time, font=font, fill="#FFFF00", align = "center")
-    if not buttonA.value and not buttonB.value:  # none pressed
-        draw.text((x, y), "Now the time is: \n" + current_date + current_time, font=font, fill="#FFFF00", align = "center")
+        if buttonB.value and not buttonA.value:  # just button A pressed
+            draw.text((x, y), "Today's date: \n" + current_date, font=font, fill="#FFFF00", align = "center")
+        if buttonA.value and not buttonB.value:  # just button B pressed
+            draw.text((x, y), "Current time: \n" + current_time, font=font, fill="#FFFF00", align = "center")
+        if not buttonA.value and not buttonB.value:  # none pressed
+            draw.text((x, y), "Now the time is: \n" + current_date + current_time, font=font, fill="#FFFF00", align = "center")
 
     disp.image(image, rotation)
     time.sleep(1)
