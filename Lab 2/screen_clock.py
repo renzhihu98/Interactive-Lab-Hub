@@ -77,10 +77,10 @@ while True:
     else:
         if buttonB.value and not buttonA.value:  # just button A pressed
             date = f"Today is\n{current_date}"
-            draw.text(((width - font.getsize(date)[0])/2 + random.randint(0, 20), (height - font.getsize(date)[1])/2) - random.randint(0, 10) , date, font=font, fill="#FFFF00")
+            draw.text(((width - font.getsize(date)[0])/2 + random.randint(0, 20), (height - font.getsize(date)[1])/2 - random.randint(0, 10)), date, font=font, fill="#FFFF00")
         if buttonA.value and not buttonB.value:  # just button B pressed
             c_time = f"Now is\n{current_time}"
-            draw.text(((width - font.getsize(c_time)[0])/2 + random.randint(0, 10), (height - font.getsize(c_time)[1])/2) - random.randint(0, 10), c_time, font=font, fill="#FFFF00")
+            draw.text(((width - font.getsize(c_time)[0])/2 + random.randint(0, 10), (height - font.getsize(c_time)[1])/2 - random.randint(0, 10)), c_time, font=font, fill="#FFFF00")
         if not buttonA.value and not buttonB.value:  # none pressed
             rn = f"{current_date} {current_time}"
             draw.text(((width - font.getsize(rn)[0])/2, (height - font.getsize(rn)[1])/2), rn, font=font, fill="#FFFF00")
