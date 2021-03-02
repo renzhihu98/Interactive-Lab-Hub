@@ -55,7 +55,7 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 25)
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -70,18 +70,17 @@ while True:
     draw.rectangle((0, 0, width, height), outline=0, fill=(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
     current_date = time.strftime("%m/%d/%Y")
     current_time = time.strftime("%H:%M:%S")
-    y = 20
 
     if buttonA.value and buttonB.value:
         txt = "CLICK THE BUTTONS"
-        draw.text(((width - font.getsize(txt)[0])/2, (width - font.getsize(txt)[1])/2), txt, font=font, fill="#FFFF00")
+        draw.text(((width - font.getsize(txt)[0])/2, (height - font.getsize(txt)[1])/2), txt, font=font, fill="#FFFF00")
     else:
         if buttonB.value and not buttonA.value:  # just button A pressed
-            draw.text((x, y), "Today's date: \n" + current_date, font=font, fill="#FFFF00", align = "center")
+            draw.text(((width - font.getsize(txt)[0])/2, (height - font.getsize(txt)[1])/2), "Today's date: \n" + current_date, font=font, fill="#FFFF00", align = "center")
         if buttonA.value and not buttonB.value:  # just button B pressed
-            draw.text((x, y), "Current time: \n" + current_time, font=font, fill="#FFFF00", align = "center")
+            draw.text(((width - font.getsize(txt)[0])/2, (height - font.getsize(txt)[1])/2), "Current time: \n" + current_time, font=font, fill="#FFFF00", align = "center")
         if not buttonA.value and not buttonB.value:  # none pressed
-            draw.text((x, y), "Now the time is: \n" + current_date + current_time, font=font, fill="#FFFF00", align = "center")
+            draw.text(((width - font.getsize(txt)[0])/2, (height - font.getsize(txt)[1])/2), "Now the time is: \n" + current_date + current_time, font=font, fill="#FFFF00", align = "center")
 
     disp.image(image, rotation)
     time.sleep(0.5)
