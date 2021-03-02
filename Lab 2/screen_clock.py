@@ -54,7 +54,7 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 25)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -66,13 +66,14 @@ buttonA.switch_to_input()
 buttonB.switch_to_input()
 
 while True:
-    draw.rectangle((0, 0, width, height), outline=0, fill=0)
+    draw.rectangle((0, 0, width, height), outline=0, fill=(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
     current_date = time.strftime("%m/%d/%Y")
     current_time = time.strftime("%H:%M:%S")
-    y = top
+    y = 20
 
     if buttonA.value and buttonB.value:
-        draw.text((x, y), "Click the buttons!", font=font, fill="#FFFF00", align = "center")
+        txt = "CLICK THE BUTTONS"
+        draw.text(((width - font.getsize(txt)[0])/2, (width - font.getsize(txt)[1])/2), txt, font=font, fill="#FFFF00")
     else:
         if buttonB.value and not buttonA.value:  # just button A pressed
             draw.text((x, y), "Today's date: \n" + current_date, font=font, fill="#FFFF00", align = "center")
@@ -82,4 +83,4 @@ while True:
             draw.text((x, y), "Now the time is: \n" + current_date + current_time, font=font, fill="#FFFF00", align = "center")
 
     disp.image(image, rotation)
-    time.sleep(1)
+    time.sleep(0.5)
