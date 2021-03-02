@@ -55,7 +55,7 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
-font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
+font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 18)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -76,13 +76,13 @@ while True:
         draw.text(((width - font.getsize(txt)[0])/2, (height - font.getsize(txt)[1])/2), txt, font=font, fill="#FFFF00")
     else:
         if buttonB.value and not buttonA.value:  # just button A pressed
-            date = "Today's date: \n" + current_date
+            date = "Today is\n" + current_date
             draw.text(((width - font.getsize(date)[0])/2, (height - font.getsize(date)[1])/2), date, font=font, fill="#FFFF00", align = "center")
         if buttonA.value and not buttonB.value:  # just button B pressed
-            time = "Current time: \n" + current_time
-            draw.text(((width - font.getsize(time)[0])/2, (height - font.getsize(time)[1])/2), time, font=font, fill="#FFFF00", align = "center")
+            c_time = "Now is\n" + current_time
+            draw.text(((width - font.getsize(c_time)[0])/2, (height - font.getsize(c_time)[1])/2), c_time, font=font, fill="#FFFF00", align = "center")
         if not buttonA.value and not buttonB.value:  # none pressed
-            rn = "Now the time is: \n" + current_date + current_time
+            rn = "The time is\n" + current_date + current_time
             draw.text(((width - font.getsize(rn)[0])/2, (height - font.getsize(rn)[1])/2), rn, font=font, fill="#FFFF00", align = "center")
 
     disp.image(image, rotation)
