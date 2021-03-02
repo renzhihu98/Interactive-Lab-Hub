@@ -76,14 +76,14 @@ while True:
         draw.text(((width - font.getsize(txt)[0])/2, (height - font.getsize(txt)[1])/2), txt, font=font, fill="#FFFF00")
     else:
         if buttonB.value and not buttonA.value:  # just button A pressed
-            date = "Today is\n" + current_date
-            draw.text(((width - font.getsize(date)[0])/2, (height - font.getsize(date)[1])/2), date, font=font, fill="#FFFF00", align = "center")
+            date = f"Today is\n{current_date}"
+            draw.text(((width - font.getsize(date)[0])/2, (height - font.getsize(date)[1])/2), date, font=font, fill="#FFFF00")
         if buttonA.value and not buttonB.value:  # just button B pressed
-            c_time = "Now is\n" + current_time
-            draw.text(((width - font.getsize(c_time)[0])/2, (height - font.getsize(c_time)[1])/2), c_time, font=font, fill="#FFFF00", align = "center")
+            c_time = f"Now is\n{current_time}"
+            draw.text(((width - font.getsize(c_time)[0])/2, (height - font.getsize(c_time)[1])/2), c_time, font=font, fill="#FFFF00")
         if not buttonA.value and not buttonB.value:  # none pressed
-            rn = "The time is\n" + current_date + current_time
-            draw.text(((width - font.getsize(rn)[0])/2, (height - font.getsize(rn)[1])/2), rn, font=font, fill="#FFFF00", align = "center")
+            rn = f"The time is\n{current_date} {current_time}"
+            draw.text(((width - font.getsize(rn)[0])/2, (height - font.getsize(rn)[1])/2), rn, font=font, fill="#FFFF00")
 
     disp.image(image, rotation)
     time.sleep(0.5)
