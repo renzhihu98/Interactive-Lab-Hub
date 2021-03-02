@@ -82,7 +82,7 @@ while True:
             c_time = f"Now is\n{current_time}"
             draw.text(((width - font.getsize(c_time)[0])/2, (height - font.getsize(c_time)[1])/2), c_time, font=font, fill="#FFFF00")
         if not buttonA.value and not buttonB.value:  # none pressed
-            rn = f"The time is\n{current_date} {current_time}"
+            rn = f"{current_date} {current_time}"
             draw.text(((width - font.getsize(rn)[0])/2, (height - font.getsize(rn)[1])/2), rn, font=font, fill="#FFFF00")
 
     disp.image(image, rotation)
