@@ -70,16 +70,16 @@ buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
-rn = datetime.now()
 next_bday = datetime(2022, 1, 11)
 ny = datetime(2022, 1, 1)
 
 while True:
+    rn = datetime.now()
     draw.rectangle((0, 0, width, height), outline=0, fill=(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
     current_day = rn.strftime("%A")
     current_date = rn.strftime("%b %-d")
     current_year = rn.strftime("%Y")
-    current_time = rn.strftime("%H:%M")
+    current_time = rn.strftime("%H:%M:%S")
     current_m = rn.strftime("%p")
 
     if buttonA.value and buttonB.value:
@@ -122,4 +122,3 @@ while True:
     
     disp.image(image, rotation)
     time.sleep(1)
-
