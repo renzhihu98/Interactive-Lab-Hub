@@ -1,4 +1,6 @@
 import time
+from datetime import datetime, timezone
+import pytz
 import subprocess
 import digitalio
 import board
@@ -55,7 +57,9 @@ x = 0
 # Alternatively load a TTF font.  Make sure the .ttf font file is in the
 # same directory as the python script!
 # Some other nice fonts to try: http://www.dafont.com/bitmap.php
+big_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 50)
 font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 20)
+small_font = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 15)
 
 # Turn on the backlight
 backlight = digitalio.DigitalInOut(board.D22)
@@ -66,24 +70,55 @@ buttonB = digitalio.DigitalInOut(board.D24)
 buttonA.switch_to_input()
 buttonB.switch_to_input()
 
+next_bday = datetime(2022, 1, 11)
+ny = datetime(2022, 1, 1)
+
 while True:
+    rn = datetime.now()
     draw.rectangle((0, 0, width, height), outline=0, fill=(random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)))
-    current_date = time.strftime("%m/%d/%Y")
-    current_time = time.strftime("%H:%M:%S")
+    current_day = rn.strftime("%A")
+    current_date = rn.strftime("%b %-d")
+    current_year = rn.strftime("%Y")
+    current_time = rn.strftime("%H:%M:%S")
+    current_m = rn.strftime("%p")
 
     if buttonA.value and buttonB.value:
-        txt = "CLICK THE BUTTONS"
-        draw.text(((width - font.getsize(txt)[0])/2, (height - font.getsize(txt)[1])/2), txt, font=font, fill="#FFFF00")
+        x = 10
+        y = top + 5
+        draw.text((x, y), current_date, font=small_font, fill="#000000")
+        y = height - font.getsize(current_day)[1]
+        draw.text((x, y), current_day, font=small_font, fill="#000000")
+        x = width - font.getsize(current_year)[0]
+        y = top + 5
+        draw.text((x, y), current_year, font=small_font, fill="#000000")
+        y = height - font.getsize(current_m)[1]
+        draw.text((x + 5, y), current_m, font=small_font, fill="#000000")
+
+        y = (height - big_font.getsize(current_time)[1])/2
+        draw.text(((width - big_font.getsize(current_time)[0])/2, y), current_time, font=big_font, fill="#000000")
+
     else:
         if buttonB.value and not buttonA.value:  # just button A pressed
-            date = f"Today is\n{current_date}"
-            draw.text(((width - font.getsize(date)[0])/2 + random.randint(10, 50), (height - font.getsize(date)[1])/2 - random.randint(5, 30)), date, font=font, fill="#FFFF00")
+            diff = f"new year's in\n{(ny - rn).days} days"
+            draw.text(((width - font.getsize(diff)[0])/2 + random.randint(50, 80), (height - font.getsize(diff)[1])/2 - random.randint(10, 30)), diff, font=font, fill="#000000")
         if buttonA.value and not buttonB.value:  # just button B pressed
-            c_time = f"Now is\n{current_time}"
-            draw.text(((width - font.getsize(c_time)[0])/2 + random.randint(10, 50), (height - font.getsize(c_time)[1])/2 - random.randint(5, 30)), c_time, font=font, fill="#FFFF00")
-        if not buttonA.value and not buttonB.value:  # none pressed
-            rn = f"{current_date} {current_time}"
-            draw.text(((width - font.getsize(rn)[0])/2, (height - font.getsize(rn)[1])/2), rn, font=font, fill="#FFFF00")
-
+            diff = f"the next bday's in\n{(next_bday - rn).days} days"
+            draw.text(((width - font.getsize(diff)[0])/2 + random.randint(50, 80), (height - font.getsize(diff)[1])/2 - random.randint(10, 30)), diff, font=font, fill="#000000")
+        if not buttonA.value and not buttonB.value:  # both pressed
+            world = {
+            "London": rn.astimezone(pytz.timezone("Europe/London")),
+            "Shanghai": rn.astimezone(pytz.timezone("Asia/Shanghai")),
+            "LA": rn.astimezone(pytz.timezone("America/Los_Angeles")),
+            "New York": rn.astimezone(pytz.timezone("America/New_York")),
+            "Rome": rn.astimezone(pytz.timezone("Europe/Rome")),
+            "Tokyo": rn.astimezone(pytz.timezone("Asia/Tokyo")),
+            "Cairo": rn.astimezone(pytz.timezone("Africa/Cairo"))
+            }
+            city = random.choice(list(world.keys()))
+            local_time = world[city].strftime("%H:%M")
+            clk = f"it's {local_time} in {city}"
+            draw.text(((width - font.getsize(clk)[0])/2, (height - font.getsize(clk)[1])/2), clk, font=font, fill="#000000")
+            time.sleep(2)
+    
     disp.image(image, rotation)
-    time.sleep(0.5)
+    time.sleep(1)
