@@ -5,6 +5,7 @@ import digitalio
 import random
 from PIL import Image, ImageDraw, ImageFont
 import textwrap
+import os
 
 import adafruit_mpr121
 import adafruit_rgb_display.st7789 as st7789
@@ -101,8 +102,8 @@ while True:
 	y = top
 	draw.text(((width - font(20).getsize(head)[0])/2, y), head, font=font(20), fill="#000000")
 
-
 	quote = quotes[random.randint(0, 11)]
+
 	lines = textwrap.wrap(quote, width=20)
 
 	x_text = 20
@@ -120,8 +121,8 @@ while True:
 		draw.text((x_text, y_text), line, font=font(25), fill="#CD5C5C")
 		y_text += 22
 
-	
 	disp.image(image, rotation)
-	time.sleep(8)
+	os.system(f"espeak '{quote}'")
+	time.sleep(5)
 
 
