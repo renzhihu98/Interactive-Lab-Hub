@@ -1,4 +1,4 @@
-# You're a wizard, [Student Name Here]
+# You're a wizard, Renzhi
 
 <img src="https://pbs.twimg.com/media/Cen7qkHWIAAdKsB.jpg" height="400">
 
@@ -68,9 +68,17 @@ Create a system that runs on the Raspberry Pi that takes in one or more sensors 
 
 1. Sketch ideas for what you'll work on in lab on Wednesday.
 
+<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%203/idea_sketch.jpg" height="500">
+
 ## Share your idea sketches with Zoom Room mates and get feedback
 
 *what was the feedback? Who did it come from?*
+
+"but it requires participants to speak to it" -Zhonghao
+
+"you may want to decide which sensor to use first" -Yimeng
+
+"sounds interesting" -Yuanhao
 
 ## Prototype your system
 
@@ -81,7 +89,11 @@ The system should:
 
 *Document how the system works*
 
+Pi's screen will prompt the user to say his/her birthday and pick a number by touching the pin on capacitive touch sensor, then the screen will display a random "your day in a glance" saying and output its correspondent TTS audio to the speaker. The system takes in the input of the pin data and transfer it to text and audio.
+
 *Include videos or screencaptures of both the system and the controller.*
+
+[Video](https://youtu.be/xRv2yhToI3I)
 
 ## Test the system
 Try to get at least two people to interact with your system. (Ideally, you would inform them that there is a wizard _after_ the interaction, but we recognize that can be hard.)
@@ -89,18 +101,18 @@ Try to get at least two people to interact with your system. (Ideally, you would
 Answer the following:
 
 ### What worked well about the system and what didn't?
-*your answer here*
+
+The system has successfully transformed the touch signal to visual and audio signal, which functions like the astrology app "co-star". However, the functionality is limited and there exists some bug, such as sometimes the audio can't be played consecutively when switching between pins.
 
 ### What worked well about the controller and what didn't?
 
-*your answer here*
+The controller worked well as a basic touch interface, but the appearance is very simple and not user friendly. It's easily mistouched.
 
 ### What lessons can you take away from the WoZ interactions for designing a more autonomous version of the system?
 
-*your answer here*
+My take away is that WoZ interactions don't need to be complicated, but we need to have a clear mind of how sensor works and how to capture the signals.
 
 
 ### How could you use your system to create a dataset of interaction? What other sensing modalities would make sense to capture?
 
-*your answer here*
-
+I think I could expand my system and the use of touch sensor to include more functionalities, such as the banana one Ilan showed in class and the piano. I'd also like to try combine motion/sound sensing modalities to create a more developed device.
