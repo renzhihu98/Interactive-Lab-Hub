@@ -26,8 +26,17 @@ In Lab 5 part 2, we'll incorporate interactive responses.
 
 ### Deliverables for this lab are:
 1. Show pictures, videos of the "sense-making" algorithms you tried.
-1. Show a video of how you embed one of these algorithms into your observant system.
-1. Test, characterize your interactive device. Show faults in the detection and how the system handled it.
+
+First, I tried the OpenCV examples.
+
+<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/contour_out.jpg" width=300> <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/flow.png" width=300>    <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/detected_out.jpg" width=300>
+
+Then, I experimented with Teachable Machines using happy and sad face examples in an attempt to create a facial expression classifier.
+
+<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/1.png" height=500>  <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/2.png" height=500>  <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/3.png" height=500>
+
+2. Show a video of how you embed one of these algorithms into your observant system.
+3. Test, characterize your interactive device. Show faults in the detection and how the system handled it.
 
 
 ## Overview
