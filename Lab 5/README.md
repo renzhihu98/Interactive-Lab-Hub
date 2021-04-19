@@ -38,6 +38,8 @@ Then, I experimented with Teachable Machines using happy and sad face examples i
 2. Show a video of how you embed one of these algorithms into your observant system.
 3. Test, characterize your interactive device. Show faults in the detection and how the system handled it.
 
+**See Part B/C/D.**
+
 
 ## Overview
 Building upon the paper-airplane metaphor (we're understanding the material of machine learning for design), here are the four sections of the lab activity:
@@ -160,6 +162,8 @@ During the lecture, we mentioned questions to help characterize a material:
 * How does X feel?
 
 **Include a short video demonstrating the answers to these questions.**
+
+[Video](https://youtu.be/7LaauGsuNYg)
 
 ### Part 2.
 
