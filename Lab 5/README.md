@@ -26,15 +26,6 @@ In Lab 5 part 2, we'll incorporate interactive responses.
 
 ### Deliverables for this lab are:
 1. Show pictures, videos of the "sense-making" algorithms you tried.
-
-First, I tried the OpenCV examples.
-
-<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/contour_out.jpg" width=300> <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/flow.png" width=300>    <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/detected_out.jpg" width=300>
-
-Then, I experimented with Teachable Machines using happy and sad face examples in an attempt to create a facial expression classifier.
-
-<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/1.png" height=500>  <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/2.png" height=500>  <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/3.png" height=500>
-
 2. Show a video of how you embed one of these algorithms into your observant system.
 3. Test, characterize your interactive device. Show faults in the detection and how the system handled it.
 
@@ -132,15 +123,35 @@ This can be as simple as the boat detector earlier.
 Try out different interactions outputs and inputs.
 **Describe and detail the interaction, as well as your experimentation.**
 
+First, I tried the OpenCV examples.
+
+<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/contour_out.jpg" width=300> <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/flow.png" width=300>    <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/detected_out.jpg" width=300>
+
+Additionally, I edited the code for face detection and made it a face counter. It counts the number of human face in front of the Pi camera and shows the number of faces on Pi display.
+
+Then, I experimented with Teachable Machines using happy and sad face examples in an attempt to create a facial expression classifier.
+
+<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/1.png" height=500>  <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/2.png" height=500>  <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/3.png" height=500>
+
 ### Part C
 ### Test the interaction prototype
 
 Now flight test your interactive prototype and **note your observations**:
+
+<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/sad.png" width=600>
+<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/happy.png" width=600>
+
 For example:
 1. When does it what it is supposed to do?
 1. When does it fail?
 1. When it fails, why does it fail?
 1. Based on the behavior you have seen, what other scenarios could cause problems?
+
+> To start off, I used the happy/sad face training model to classify the emotion. However, it worked fine on webcam, but it didn't really do what it supposed to do on the Pi camera - it failed to identify different emotions most of the time. For example, the result was always only sad or happy, even though I have changed my facial expression. 
+> 
+> I think one of the reasons why it failed is that facial expressions are relatively subtle and still, so the model might not be accurate due to a limited training data. And the Pi camera captured a different lighting and resolution from the webcam on my laptop, which lead to the inconsistency.
+> 
+> Based on the behavior I've seen, scenarios where the user is not me, the lighting/background/facial structure/hairstyle/etc. are different could cause problems.
 
 **Think about someone using the system. Describe how you think this will work.**
 1. Are they aware of the uncertainties in the system?
@@ -148,14 +159,24 @@ For example:
 1. How could change your interactive system to address this?
 1. Are there optimizations you can try to do on your sense-making algorithm.
 
+> I don't think users are aware of the uncertainties in the system because it's a fairly simple interaction. Miss classification would be pretty bad because the decvice can't even complete the one and only thing it's supposed to do, which makes it useless.
+> 
+> To address the issue, I modified my model, instead of building an emotion classifer, I switched to an energy detetor that detects if I'm tired or not. My initial idea was to train the model using more straightforward data with more movement and contrast. 
+
+<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/energetic.png" width=600>
+<img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%205/tired.png" width=600>
+
 ### Part D
 ### Characterize your own Observant system
 
 Now that you have experimented with one or more of these sense-making systems **characterize their behavior**.
 During the lecture, we mentioned questions to help characterize a material:
 * What can you use X for?
+> Energy detector can be used for teaching quality improvement. It can detect if a student is tired and not paying attention to the zoom lecture/recording. If a lot of students get tired during the lecture or recording, the instructor could choose to take a break or switch topics, and the recording video could pause or provide the students with interesting materials to wake them up.
 * What is a good environment for X?
+> Well lit, stable environment.
 * What is a bad environment for X?
+> Dim, shaky environment.
 * When will X break?
 * When it breaks how will X break?
 * What are other properties/behaviors of X?
@@ -163,7 +184,7 @@ During the lecture, we mentioned questions to help characterize a material:
 
 **Include a short video demonstrating the answers to these questions.**
 
-[Video](https://youtu.be/7LaauGsuNYg)
+[Video](https://youtu.be/SP18nrz0hgg)
 
 ### Part 2.
 
