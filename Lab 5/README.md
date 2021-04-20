@@ -178,9 +178,13 @@ During the lecture, we mentioned questions to help characterize a material:
 * What is a bad environment for X?
 > Dim, shaky environment.
 * When will X break?
+> Energy detector has a limited functionality, therefore it will break/not detect as "tired" when the "tiring" person doesn't use the hand to hold their face, or when there's more than one person in the frame.
 * When it breaks how will X break?
+> It will falsely classifies "tired" as "energetic", or predicts random result.
 * What are other properties/behaviors of X?
+> Currently energy detector doesn't have other properties other than classifying energetic/tired.
 * How does X feel?
+> X is a small camera attached to the Pi, so it feels sketchy.
 
 **Include a short video demonstrating the answers to these questions.**
 
