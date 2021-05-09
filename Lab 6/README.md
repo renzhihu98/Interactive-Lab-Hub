@@ -85,17 +85,22 @@ Glitch is a great tool for prototyping sites, interfaces and web-apps that's wor
 
 Find at least one class (more are okay) partner, and design a distributed application together. 
 
-I partnered with Yuanhao Zhu to design the distributed application.
+I partnered with [Yuanhao Zhu](https://github.com/YuanhaoZhu/Interactive-Lab-Hub/tree/Spring2021/Lab%206) to design the distributed application.
 
 **1. Explain your design** For example, if you made a remote controlled banana piano, explain why anyone would want such a thing.
 
-Our design is a device that uses the proximity sensor and LED buttons to communicate each users' availability.
+Our design is a device that uses the proximity sensor and LED buttons to communicate each users' availability. During COVID time, people spend their most of time at home. In the meantime, people tend to respond to their messages slower, because, at home, the phone is not the most important communication tool. Some people even have difficulty finding their phones. With this automatic device, people will know if their friends are available or not and respond to them in one click. You will not be disturbed when you're lying on your bed, watching TV, even playing games, and enjoy your time at home.
 
 **2. Diagram the architecture of the system.** Be clear to document where input, output and computation occur, and label all parts and connections. For example, where is the banana, who is the banana player, where does the sound get played, and who is listening to the banana music?
 
 <img src="https://github.com/renzhihu98/Interactive-Lab-Hub/blob/Spring2021/Lab%206/process.jpg?raw=true">
 
 **3. Build a working prototype of the system.** Do think about the user interface: if someone encountered these bananas, would they know how to interact with them? Should they know what to expect?
+
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/raw/Spring2021/Lab%206/original_design.png">
+<img src="https://github.com/YuanhaoZhu/Interactive-Lab-Hub/raw/Spring2021/Lab%206/updated_design.png">
+
+Photo and annotation by Yuanhao Zhu.
 
 **4. Document the working prototype in use.** It may be helpful to record a Zoom session where you should the input in one location clearly causing response in another location.
 
